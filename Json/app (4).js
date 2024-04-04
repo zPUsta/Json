@@ -6,6 +6,5 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=a601cd5dcb60d698e00e2f
 )
   .then((res) => res.json())
   .then((name) => {
-    const movieName = name.results.map((data) => data.title);
-    console.log(movieName);
+    const movieName = name.results.map((data) => console.log(data.title));
   })
